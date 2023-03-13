@@ -13,7 +13,7 @@ export const Subscribe = () => {
       <p className="text-center text-base">
         Get 20% off on your first order just y subscribing to our newsletter
       </p>
-      <div className="flex flex-nowrap gap-1 mx-auto w-fit">
+      <div className="flex sm:flex-row flex-col gap-1 mx-auto w-fit">
         <InputIcons icon={<HiOutlineMail />} placeholder="Enter your email" />
         <Button text="Subscribe" />
       </div>
