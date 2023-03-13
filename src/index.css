@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@200;300;400;500;600&family=Work+Sans:wght@100;200;300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-xl;
+}
+
+h2 {
+  @apply md:text-2xl md:text-left text-center text-lg font-bold;
+}
+
+h3 {
+  @apply md:text-lg text-sm font-bold text-[#1D242D];
+}
+
+h4 {
+  @apply md:text-lg text-base font-medium text-[#1D242D] text-opacity-50;
+}
+
+h5 {
+  @apply md:text-base text-sm font-medium text-[#1D242D];
+}
+
+h6 {
+  @apply font-medium text-2xl;
+}
+
+p {
+  @apply font-medium text-xs text-[#1D242D] text-opacity-50;
+}
+
+section {
+  @apply space-y-10 my-14;
+}
