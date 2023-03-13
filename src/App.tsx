@@ -8,7 +8,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Public />}>
         <Route index element={<Client />} />
-        <Route path="/cart" element={<Cart />} />
       </Route>
     </Routes>
   );
