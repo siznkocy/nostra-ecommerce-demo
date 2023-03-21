@@ -5,39 +5,43 @@ import { Link } from "react-router-dom";
 import { ButtonsIcon } from "./button/Buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { useAppDispatch, useAppSelector } from "../hook/useApp";
+import {
+  notification,
+  currentNotificationState,
+} from "../features/menu/popupSlice";
 
-function Notification({
-  open,
-  children,
-}: {
-  open: Boolean;
-  children: ReactNode;
-}) {
+function Notification({ children }: { children: ReactNode }) {
+  const notif = useAppSelector(currentNotificationState);
+
   return (
-    <section className={`bg-[#1D242D] text-white ${open ? "" : "hidden"} m-0`}>
+    <section className={`bg-[#1D242D] text-white ${notif ? "" : "hidden"} m-0`}>
       {children}
     </section>
   );
 }
 
 export function SignUpNotification() {
-  const [isOpen, setIsOpen] = useState<Boolean>(true);
+  const dispatch = useAppDispatch();
+
+  const close = () => {
+    dispatch(notification());
+  };
 
   return (
-    <Notification open={isOpen}>
-      <article className="p-2 flex justify-between items-center max-w-5xl mx-auto">
+    <Notification>
+      <article className="p-2 flex justify-between items-center max-w-5xl mx-auto z-20">
         <div className="font-medium text-center w-fit mx-auto flex sm:flex-row sm:gap-2 flex-col gap-0">
           <p className="text-white text-base">
-            This is a <span className="font-bold">Demo website</span> by Aubrey
+            Demo website based on UI designed by{" "}
+            <Link to="/signup" className="underline font-bold">
+              Pixelz
+            </Link>
           </p>
-          <Link to="/signup" className="underline">
-            Contact me
-          </Link>
         </div>
         <ButtonsIcon
           icon={<FontAwesomeIcon icon={faClose} />}
-          // isClick={isOpen}
-          // setIsClick={setIsOpen}
+          onClick={close}
         />
       </article>
     </Notification>

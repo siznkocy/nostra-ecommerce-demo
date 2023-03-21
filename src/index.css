@@ -1,35 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@200;300;400;500;600&family=Work+Sans:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 h1 {
-  @apply text-xl;
+  color: hsla(0, 0%, 0%, 1);
+}
+
+h1 {
+  @apply text-xl font-Montserrat;
 }
 
 h2 {
-  @apply md:text-2xl md:text-left text-center text-lg font-bold;
+  @apply md:text-2xl md:text-left text-center text-lg font-bold font-Montserrat;
 }
 
 h3 {
-  @apply md:text-lg text-sm font-bold text-[#1D242D];
+  @apply md:text-lg text-sm font-bold text-[#1D242D] font-Montserrat;
 }
 
 h4 {
-  @apply md:text-lg text-base font-medium text-[#1D242D] text-opacity-50;
+  @apply md:text-lg text-base font-medium text-[#1D242D] text-opacity-50 font-Montserrat;
 }
 
 h5 {
-  @apply md:text-base text-sm font-medium text-[#1D242D];
+  @apply md:text-base text-sm font-medium text-[#1D242D] font-Raleway;
 }
 
 h6 {
-  @apply font-medium text-2xl;
+  @apply font-medium text-2xl font-Raleway;
 }
 
 p {
-  @apply font-medium text-xs text-[#1D242D] text-opacity-50;
+  @apply font-medium text-xs text-[#1D242D] text-opacity-50 font-Raleway;
 }
 
 section {

@@ -23,9 +23,6 @@ const Curated = () => {
     },
   ];
 
-  // gugu lukhele
-  // sanele jele
-
   return (
     <section className="space-y-10 my-10  ">
       <h2>Curated picks</h2>
@@ -33,17 +30,20 @@ const Curated = () => {
         {curated.map((item, i) => (
           <article
             key={i}
-            className="flex flex-col  lg:w-[23%] md:w-[30%] sm:w-[47%] w-full sm:aspect-square aspect-[3/1] rounded-md"
+            className="lg:w-[23%] sm:w-[47%] w-full lg:aspect-square aspect-[4/1] rounded-md"
             style={{
               backgroundImage: `url(${item.url})`,
+              backgroundColor: "lightgray",
               backgroundSize: "cover",
             }}
           >
-            <div className="mx-auto mt-auto mb-5 px-8 w-full max-w-xs">
-              <ButtonsIconText
-                text={item.text}
-                icon={<FontAwesomeIcon icon={faArrowRight} />}
-              />
+            <div className="h-full w-ful flex flex-col m-7">
+              <div className="mx-auto mt-auto w-full max-w-xs">
+                <ButtonsIconText
+                  text={item.text}
+                  icon={<FontAwesomeIcon icon={faArrowRight} />}
+                />
+              </div>
             </div>
           </article>
         ))}

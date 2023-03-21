@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonsIconText } from "./button/Buttons";
+import { ButtonsIconText } from "../../components/button/Buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
